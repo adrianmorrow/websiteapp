@@ -21,11 +21,13 @@
             </ul>
             {% endblock %}
         </header>
-        <main>{% block content %}{% endblock %}</main>
-        <aside></aside>
+        <div class="content-container">
+            <main>{% block content %}{% endblock %}</main>
+            <aside>{% block sidebarcontent %}{% endblock %}</aside>    
+        </div>
         <footer>
-            
+            <p>&copy;{% now "Y" %}</p>
         </footer>
-    </div>
+    </div><!-- end container-->
 </body>
 </html>

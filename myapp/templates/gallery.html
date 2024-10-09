@@ -3,5 +3,34 @@
 {% block nav-gallery %}<strong class="nav-active">Gallery</strong>{% endblock %}
 {% block title %}Gallery Page{% endblock %}
 {% block content %}
-<p>This is the gallery page.</p>
+<h1>This is the gallery page.</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et dui sem. Proin vitae ullamcorper libero. Nulla vitae risus elit. Vivamus suscipit sapien orci. Fusce euismod metus quis tristique finibus. Morbi aliquam imperdiet enim, in dignissim arcu eleifend non. Curabitur sed nulla sed orci vulputate scelerisque non et sem.</p>
+<!-- <a href="#"><img src="../static/images/gallery/thumbs/gallery-img-1.jpg" alt="gallery image 1"></a>
+<a href="#"><img src="../static/images/gallery/thumbs/gallery-img-2.jpg" alt="gallery image 1"></a>
+<a href="#"><img src="../static/images/gallery/thumbs/gallery-img-3.jpg" alt="gallery image 1"></a> -->
+<div class="gallery">
+  <a href="#img1">
+      <img src="../static/images/gallery/thumbs/gallery-img-1.jpg">
+    </a>
+    <a href="#img2">
+      <img src="../static/images/gallery/thumbs/gallery-img-2.jpg">
+    </a>
+    <a href="#img3">
+      <img src="../static/images/gallery/thumbs/gallery-img-3.jpg">
+    </a>
+</div>
+<a href="#" class="lightbox" id="img1">
+    <span style="background-image: url('../static/images/gallery/large/gallery-img-1.jpg')"></span>
+  </a>
+  <a href="#" class="lightbox" id="img2">
+    <span style="background-image: url('../static/images/gallery/large/gallery-img-2.jpg')"></span>
+  </a>
+  <a href="#" class="lightbox" id="img3">
+    <span style="background-image: url('../static/images/gallery/large/gallery-img-3.jpg')"></span>
+  </a>
+{% endblock %}
+{% block sidebarcontent %}
+<h2>This is the gallery page sidebar content.</h2>
+<p>Nulla vitae risus elit. Vivamus suscipit sapien orci. Fusce euismod metus quis tristique finibus. Morbi aliquam imperdiet enim, in dignissim arcu eleifend non. Curabitur sed nulla sed orci vulputate scelerisque non et sem.</p>
+
 {% endblock %}

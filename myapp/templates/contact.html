@@ -3,5 +3,22 @@
 {% block nav-contact %}<strong class="nav-active">Contact</strong>{% endblock %}
 {% block title %}Contact Page{% endblock %}
 {% block content %}
-<p>This is the contact page.</p>
+<h1>This is the contact page.</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et dui sem.</p>
+<form action="/contact/" method="post">
+    {% csrf_token %}
+    {% for field in form %}
+        <div class="fieldWrapper">
+            {{ field.errors }}
+            {{ field.label_tag }} {{ field }}
+        </div>
+    {% endfor %}
+    <input type="submit" value="Submit">
+  </form>
+{% endblock %}
+
+{% block sidebarcontent %}
+<h2>This is the contact page sidebar content.</h2>
+<p>Nulla vitae risus elit. Vivamus suscipit sapien orci. Fusce euismod metus quis tristique finibus. Morbi aliquam imperdiet enim, in dignissim arcu eleifend non. Curabitur sed nulla sed orci vulputate scelerisque non et sem.</p>
+
 {% endblock %}
